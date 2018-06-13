@@ -1,0 +1,25 @@
+# Mysql
+#   gem install mysql2
+#
+#   Ensure the Mysql gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: root
+  host: 127.0.0.1
+  port: 3306
+
+development:
+  <<: *default
+  database: almoxarifado_development
+
+test:
+  <<: *default
+  database: almoxarifado_test
+
+production:
+  <<: *default
+  database: almoxarifado_production

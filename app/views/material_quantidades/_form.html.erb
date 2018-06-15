@@ -1,0 +1,27 @@
+<%= form_with(model: material_quantidade, local: true) do |form| %>
+  <% if material_quantidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(material_quantidade.errors.count, "error") %> prohibited this material_quantidade from being saved:</h2>
+
+      <ul>
+      <% material_quantidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :material_id %>
+    <%= form.select :material_id, Material.all.collect {|m| [m.nome, m.id]}, prompt: 'Selecione um material' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantidade %>
+    <%= form.number_field :quantidade %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,1 +1,8 @@
-Olá
+<div>
+    <h1>Bem vindo ao almoxarifado Almox</h1>
+    <p><%= link_to "Materiais", materiais_path%></p>
+    <p><%= link_to "Consultar quantidades de Materiais", material_quantidades_path%></p>
+    <p><%= link_to "Registrar entrada de Materiais", new_material_quantidade_path(:entrada)%></p>
+    <p><%= link_to "Registrar retirada de Materiais", new_material_quantidade_path(:retirada)%></p>
+</div>
+

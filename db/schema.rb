@@ -10,9 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_13_020042) do
+ActiveRecord::Schema.define(version: 2018_06_14_231920) do
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "materiais", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "material_quantidades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "material_id"
+    t.integer "quantidade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["material_id"], name: "index_material_quantidades_on_material_id"
+  end
+
+  create_table "registros", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "usuarios_id"
+    t.bigint "materiais_id"
+    t.integer "quantidade"
+    t.index ["materiais_id"], name: "index_registros_on_materiais_id"
+    t.index ["usuarios_id"], name: "index_registros_on_usuarios_id"
+  end
+
+  create_table "usuarios", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -25,8 +47,11 @@ ActiveRecord::Schema.define(version: 2018_06_13_020042) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_usuarios_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "material_quantidades", "materiais"
+  add_foreign_key "registros", "materiais", column: "materiais_id"
+  add_foreign_key "registros", "usuarios", column: "usuarios_id"
 end

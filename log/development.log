@@ -153,3 +153,2505 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 59ms (Views: 43.1ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-13 17:29:04 -0300
+  [1m[35m (155.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.0) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.0) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (10.1ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMateriais (20180613203420)
+  [1m[35m (767.2ms)[0m  [1m[35mCREATE TABLE `materiais` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180613203420_create_materiais.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613203420')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (44.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMaterialQuantidades (20180613203750)
+  [1m[35m (376.7ms)[0m  [1m[35mCREATE TABLE `material_quantidades` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `material_id` bigint, `quantidade` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_material_quantidades_on_material_id`  (`material_id`), CONSTRAINT `fk_rails_6ad39107ca`
+FOREIGN KEY (`material_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613203750_create_material_quantidades.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (2.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613203750')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (75.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateHistorico (20180613203933)
+  [1m[35m (405.2ms)[0m  [1m[35mCREATE TABLE `historicos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `material_id` bigint,  INDEX `index_historicos_on_user_id`  (`user_id`),  INDEX `index_historicos_on_material_id`  (`material_id`), CONSTRAINT `fk_rails_66164ee56d`
+FOREIGN KEY (`user_id`)
+  REFERENCES `useres` (`id`)
+, CONSTRAINT `fk_rails_e57414ed00`
+FOREIGN KEY (`material_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613203933_create_historico.rb:3
+  [1m[35m (17.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateHistorico (20180613203933)
+  [1m[35m (343.9ms)[0m  [1m[35mCREATE TABLE `historicos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `material_id` bigint,  INDEX `index_historicos_on_user_id`  (`user_id`),  INDEX `index_historicos_on_material_id`  (`material_id`), CONSTRAINT `fk_rails_66164ee56d`
+FOREIGN KEY (`user_id`)
+  REFERENCES `useres` (`id`)
+, CONSTRAINT `fk_rails_e57414ed00`
+FOREIGN KEY (`material_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613203933_create_historico.rb:3
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateHistorico (20180613204552)
+  [1m[35m (385.6ms)[0m  [1m[35mCREATE TABLE `historicos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `users_id` bigint, `materiais_id` bigint,  INDEX `index_historicos_on_users_id`  (`users_id`),  INDEX `index_historicos_on_materiais_id`  (`materiais_id`), CONSTRAINT `fk_rails_6ec2fae99d`
+FOREIGN KEY (`users_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_9e89559654`
+FOREIGN KEY (`materiais_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613204552_create_historico.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613204552')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-06-13 17:54:05 -0300
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 77ms (ActiveRecord: 0.0ms)
+
+
+  
+I18n::InvalidLocaleData (can not load translations from /home/neubaner/teste/Almoxarifado/config/locales/devise.pt-BR.yml: #<Psych::SyntaxError: (<unknown>): found character that cannot start any token while scanning for the next token at line 27 column 68>):
+  
+i18n (1.0.1) lib/i18n/backend/base.rb:234:in `rescue in load_yml'
+i18n (1.0.1) lib/i18n/backend/base.rb:230:in `load_yml'
+i18n (1.0.1) lib/i18n/backend/base.rb:215:in `load_file'
+i18n (1.0.1) lib/i18n/backend/base.rb:17:in `block in load_translations'
+i18n (1.0.1) lib/i18n/backend/base.rb:17:in `each'
+i18n (1.0.1) lib/i18n/backend/base.rb:17:in `load_translations'
+i18n (1.0.1) lib/i18n/backend/simple.rb:65:in `init_translations'
+i18n (1.0.1) lib/i18n/backend/simple.rb:48:in `available_locales'
+i18n (1.0.1) lib/i18n/config.rb:45:in `available_locales'
+i18n (1.0.1) lib/i18n/config.rb:51:in `available_locales_set'
+i18n (1.0.1) lib/i18n.rb:305:in `locale_available?'
+i18n (1.0.1) lib/i18n.rb:311:in `enforce_available_locales!'
+i18n (1.0.1) lib/i18n.rb:179:in `translate'
+activemodel (5.2.0) lib/active_model/translation.rb:67:in `human_attribute_name'
+devise (4.4.3) lib/devise/failure_app.rb:106:in `block in i18n_message'
+devise (4.4.3) lib/devise/failure_app.rb:106:in `map'
+devise (4.4.3) lib/devise/failure_app.rb:106:in `i18n_message'
+devise (4.4.3) lib/devise/failure_app.rb:85:in `redirect'
+devise (4.4.3) lib/devise/failure_app.rb:43:in `respond'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:236:in `block in action'
+devise (4.4.3) lib/devise/failure_app.rb:23:in `call'
+devise (4.4.3) lib/devise/delegator.rb:7:in `call'
+warden (1.2.7) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.7) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.7) lib/warden/manager.rb:44:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-13 17:58:55 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+I18n::InvalidLocaleData (can not load translations from /home/neubaner/teste/Almoxarifado/config/locales/devise.pt-BR.yml: #<Psych::SyntaxError: (<unknown>): found character that cannot start any token while scanning for the next token at line 27 column 68>):
+  
+i18n (1.0.1) lib/i18n/backend/base.rb:234:in `rescue in load_yml'
+i18n (1.0.1) lib/i18n/backend/base.rb:230:in `load_yml'
+i18n (1.0.1) lib/i18n/backend/base.rb:215:in `load_file'
+i18n (1.0.1) lib/i18n/backend/base.rb:17:in `block in load_translations'
+i18n (1.0.1) lib/i18n/backend/base.rb:17:in `each'
+i18n (1.0.1) lib/i18n/backend/base.rb:17:in `load_translations'
+i18n (1.0.1) lib/i18n/backend/simple.rb:65:in `init_translations'
+i18n (1.0.1) lib/i18n/backend/simple.rb:48:in `available_locales'
+i18n (1.0.1) lib/i18n/config.rb:45:in `available_locales'
+i18n (1.0.1) lib/i18n/config.rb:51:in `available_locales_set'
+i18n (1.0.1) lib/i18n.rb:305:in `locale_available?'
+i18n (1.0.1) lib/i18n.rb:311:in `enforce_available_locales!'
+i18n (1.0.1) lib/i18n.rb:179:in `translate'
+activemodel (5.2.0) lib/active_model/translation.rb:67:in `human_attribute_name'
+devise (4.4.3) lib/devise/failure_app.rb:106:in `block in i18n_message'
+devise (4.4.3) lib/devise/failure_app.rb:106:in `map'
+devise (4.4.3) lib/devise/failure_app.rb:106:in `i18n_message'
+devise (4.4.3) lib/devise/failure_app.rb:85:in `redirect'
+devise (4.4.3) lib/devise/failure_app.rb:43:in `respond'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:236:in `block in action'
+devise (4.4.3) lib/devise/failure_app.rb:23:in `call'
+devise (4.4.3) lib/devise/delegator.rb:7:in `call'
+warden (1.2.7) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.7) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.7) lib/warden/manager.rb:44:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/__web_console/repl_sessions/18b3988d7954cac526b1977ecbdd027f/trace" for 127.0.0.1 at 2018-06-13 17:59:10 -0300
+Started GET "/" for 127.0.0.1 at 2018-06-13 17:59:37 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-13 17:59:38 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (160.4ms)
+Completed 200 OK in 4405ms (Views: 3930.2ms | ActiveRecord: 51.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-13 18:00:17 -0300
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'almoxarifado_development.useres' doesn't exist: SHOW FULL FIELDS FROM `useres`):
+  
+mysql2 (0.5.1) lib/mysql2/client.rb:131:in `_query'
+mysql2 (0.5.1) lib/mysql2/client.rb:131:in `block in query'
+mysql2 (0.5.1) lib/mysql2/client.rb:130:in `handle_interrupt'
+mysql2 (0.5.1) lib/mysql2/client.rb:130:in `query'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:187:in `block (2 levels) in execute'
+activesupport (5.2.0) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.0) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.0) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:186:in `block in execute'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_adapter.rb:579:in `block (2 levels) in log'
+/home/neubaner/.rbenv/versions/2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_adapter.rb:578:in `block in log'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_adapter.rb:569:in `log'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:185:in `execute'
+activerecord (5.2.0) lib/active_record/connection_adapters/mysql/database_statements.rb:28:in `execute'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:196:in `execute_and_free'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:804:in `column_definitions'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/schema_statements.rb:113:in `columns'
+activerecord (5.2.0) lib/active_record/connection_adapters/schema_cache.rb:69:in `columns'
+activerecord (5.2.0) lib/active_record/connection_adapters/schema_cache.rb:75:in `columns_hash'
+activerecord (5.2.0) lib/active_record/model_schema.rb:466:in `load_schema!'
+activerecord (5.2.0) lib/active_record/attributes.rb:234:in `load_schema!'
+activerecord (5.2.0) lib/active_record/attribute_decorators.rb:51:in `load_schema!'
+activerecord (5.2.0) lib/active_record/model_schema.rb:459:in `block in load_schema'
+/home/neubaner/.rbenv/versions/2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.2.0) lib/active_record/model_schema.rb:456:in `load_schema'
+activerecord (5.2.0) lib/active_record/model_schema.rb:346:in `attribute_types'
+activerecord (5.2.0) lib/active_record/attribute_methods.rb:230:in `has_attribute?'
+activerecord (5.2.0) lib/active_record/inheritance.rb:55:in `new'
+devise (4.4.3) app/controllers/devise/sessions_controller.rb:11:in `new'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.0) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-13 18:02:09 -0300
+Processing by Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Table 'almoxarifado_development.useres' doesn't exist: SHOW FULL FIELDS FROM `useres`):
+  
+mysql2 (0.5.1) lib/mysql2/client.rb:131:in `_query'
+mysql2 (0.5.1) lib/mysql2/client.rb:131:in `block in query'
+mysql2 (0.5.1) lib/mysql2/client.rb:130:in `handle_interrupt'
+mysql2 (0.5.1) lib/mysql2/client.rb:130:in `query'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:187:in `block (2 levels) in execute'
+activesupport (5.2.0) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.0) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.0) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:186:in `block in execute'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_adapter.rb:579:in `block (2 levels) in log'
+/home/neubaner/.rbenv/versions/2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_adapter.rb:578:in `block in log'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_adapter.rb:569:in `log'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:185:in `execute'
+activerecord (5.2.0) lib/active_record/connection_adapters/mysql/database_statements.rb:28:in `execute'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:196:in `execute_and_free'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract_mysql_adapter.rb:804:in `column_definitions'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/schema_statements.rb:113:in `columns'
+activerecord (5.2.0) lib/active_record/connection_adapters/schema_cache.rb:69:in `columns'
+activerecord (5.2.0) lib/active_record/connection_adapters/schema_cache.rb:75:in `columns_hash'
+activerecord (5.2.0) lib/active_record/model_schema.rb:466:in `load_schema!'
+activerecord (5.2.0) lib/active_record/attributes.rb:234:in `load_schema!'
+activerecord (5.2.0) lib/active_record/attribute_decorators.rb:51:in `load_schema!'
+activerecord (5.2.0) lib/active_record/model_schema.rb:459:in `block in load_schema'
+/home/neubaner/.rbenv/versions/2.5.1/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.2.0) lib/active_record/model_schema.rb:456:in `load_schema'
+activerecord (5.2.0) lib/active_record/model_schema.rb:346:in `attribute_types'
+activerecord (5.2.0) lib/active_record/attribute_methods.rb:230:in `has_attribute?'
+activerecord (5.2.0) lib/active_record/inheritance.rb:55:in `new'
+devise (4.4.3) app/controllers/devise/sessions_controller.rb:11:in `new'
+actionpack (5.2.0) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.0) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.0) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-13 18:02:26 -0300
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (419.8ms)
+Completed 200 OK in 713ms (Views: 643.1ms | ActiveRecord: 2.7ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (56.3ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateHistorico (20180613204552)
+  [1m[35m (241.9ms)[0m  [1m[35mDROP TABLE `historicos`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (167.8ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613204552'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMaterialQuantidades (20180613203750)
+  [1m[35m (163.5ms)[0m  [1m[35mDROP TABLE `material_quantidades`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (64.6ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613203750'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMateriais (20180613203420)
+  [1m[35m (163.3ms)[0m  [1m[35mDROP TABLE `materiais`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (54.0ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613203420'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateUsers (20180613020042)
+  [1m[35m (349.4ms)[0m  [1m[35mDROP INDEX `index_users_on_reset_password_token` ON `users`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (221.8ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (201.9ms)[0m  [1m[35mDROP TABLE `users`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (33.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613020042'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (199.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateUsers (20180613020042)
+  [1m[35m (364.2ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180613020042_devise_create_users.rb:5
+  [1m[35m (243.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20180613020042_devise_create_users.rb:39
+  [1m[35m (210.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20180613020042_devise_create_users.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (17.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613020042')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (76.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMateriais (20180613203420)
+  [1m[35m (249.7ms)[0m  [1m[35mCREATE TABLE `materiais` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180613203420_create_materiais.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613203420')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMaterialQuantidades (20180613203750)
+  [1m[35m (305.3ms)[0m  [1m[35mCREATE TABLE `material_quantidades` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `material_id` bigint, `quantidade` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_material_quantidades_on_material_id`  (`material_id`), CONSTRAINT `fk_rails_6ad39107ca`
+FOREIGN KEY (`material_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613203750_create_material_quantidades.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613203750')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (82.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateHistorico (20180613204552)
+  [1m[35m (1036.6ms)[0m  [1m[35mCREATE TABLE `historicos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `users_id` bigint, `materiais_id` bigint,  INDEX `index_historicos_on_users_id`  (`users_id`),  INDEX `index_historicos_on_materiais_id`  (`materiais_id`), CONSTRAINT `fk_rails_6ec2fae99d`
+FOREIGN KEY (`users_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_9e89559654`
+FOREIGN KEY (`materiais_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613204552_create_historico.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613204552')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (75.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateUsuarios (20180613210911)
+  [1m[35m (326.7ms)[0m  [1m[35mCREATE TABLE `usuarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180613210911_devise_create_usuarios.rb:5
+  [1m[35m (254.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_usuarios_on_email`  ON `usuarios` (`email`) [0m
+  ↳ db/migrate/20180613210911_devise_create_usuarios.rb:39
+  [1m[35m (221.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_usuarios_on_reset_password_token`  ON `usuarios` (`reset_password_token`) [0m
+  ↳ db/migrate/20180613210911_devise_create_usuarios.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613210911')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (29.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:12:02 -0300
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant User):
+  
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:42:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+devise (4.4.3) lib/devise.rb:316:in `get'
+devise (4.4.3) lib/devise/mapping.rb:83:in `to'
+devise (4.4.3) lib/devise/strategies/rememberable.rb:56:in `remember_key'
+devise (4.4.3) lib/devise/strategies/rememberable.rb:60:in `remember_cookie'
+devise (4.4.3) lib/devise/strategies/rememberable.rb:15:in `valid?'
+warden (1.2.7) lib/warden/proxy.rb:356:in `block in _run_strategies_for'
+warden (1.2.7) lib/warden/proxy.rb:354:in `each'
+warden (1.2.7) lib/warden/proxy.rb:354:in `_run_strategies_for'
+warden (1.2.7) lib/warden/proxy.rb:324:in `_perform_authentication'
+warden (1.2.7) lib/warden/proxy.rb:128:in `authenticate!'
+devise (4.4.3) lib/devise/controllers/helpers.rb:118:in `authenticate_user!'
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateUsuarios (20180613210911)
+  [1m[35m (184.9ms)[0m  [1m[35mDROP INDEX `index_usuarios_on_reset_password_token` ON `usuarios`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (223.8ms)[0m  [1m[35mDROP INDEX `index_usuarios_on_email` ON `usuarios`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (199.8ms)[0m  [1m[35mDROP TABLE `usuarios`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (131.4ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613210911'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateHistorico (20180613204552)
+  [1m[35m (217.8ms)[0m  [1m[35mDROP TABLE `historicos`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (31.7ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613204552'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMaterialQuantidades (20180613203750)
+  [1m[35m (138.0ms)[0m  [1m[35mDROP TABLE `material_quantidades`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (31.7ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613203750'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMateriais (20180613203420)
+  [1m[35m (147.1ms)[0m  [1m[35mDROP TABLE `materiais`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (42.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613203420'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateUsers (20180613020042)
+  [1m[35m (208.2ms)[0m  [1m[35mDROP INDEX `index_users_on_reset_password_token` ON `users`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (232.8ms)[0m  [1m[35mDROP INDEX `index_users_on_email` ON `users`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (133.3ms)[0m  [1m[35mDROP TABLE `users`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (31.3ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613020042'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateUsuarios (20180613210911)
+  [1m[35m (454.4ms)[0m  [1m[35mCREATE TABLE `usuarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180613210911_devise_create_usuarios.rb:5
+  [1m[35m (210.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_usuarios_on_email`  ON `usuarios` (`email`) [0m
+  ↳ db/migrate/20180613210911_devise_create_usuarios.rb:39
+  [1m[35m (242.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_usuarios_on_reset_password_token`  ON `usuarios` (`reset_password_token`) [0m
+  ↳ db/migrate/20180613210911_devise_create_usuarios.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613210911')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (38.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMateriais (20180613211704)
+  [1m[35m (266.5ms)[0m  [1m[35mCREATE TABLE `materiais` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nome` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20180613211704_create_materiais.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613211704')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (75.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateMaterialQuantidades (20180613211710)
+  [1m[35m (344.7ms)[0m  [1m[35mCREATE TABLE `material_quantidades` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `material_id` bigint, `quantidade` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_material_quantidades_on_material_id`  (`material_id`), CONSTRAINT `fk_rails_6ad39107ca`
+FOREIGN KEY (`material_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613211710_create_material_quantidades.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613211710')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (42.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateRegistros (20180613212003)
+  [1m[35m (333.4ms)[0m  [1m[35mCREATE TABLE `registros` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `material_id` bigint, `quantidade` int,  INDEX `index_registros_on_user_id`  (`user_id`),  INDEX `index_registros_on_material_id`  (`material_id`), CONSTRAINT `fk_rails_0364c90c1a`
+FOREIGN KEY (`user_id`)
+  REFERENCES `useres` (`id`)
+, CONSTRAINT `fk_rails_e93a90d075`
+FOREIGN KEY (`material_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613212003_create_registros.rb:3
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateRegistros (20180613212109)
+  [1m[35m (356.8ms)[0m  [1m[35mCREATE TABLE `registros` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `usuarios_id` bigint, `materiais_id` bigint, `quantidade` int,  INDEX `index_registros_on_usuarios_id`  (`usuarios_id`),  INDEX `index_registros_on_materiais_id`  (`materiais_id`), CONSTRAINT `fk_rails_add60ddb90`
+FOREIGN KEY (`usuarios_id`)
+  REFERENCES `usuarios` (`id`)
+, CONSTRAINT `fk_rails_3e5b617105`
+FOREIGN KEY (`materiais_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180613212109_create_registros.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180613212109')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (38.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:21:39 -0300
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant User):
+  
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
+bootsnap (1.3.0) lib/bootsnap/load_path_cache/core_ext/active_support.rb:42:in `load_missing_constant'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in `constantize'
+devise (4.4.3) lib/devise.rb:316:in `get'
+devise (4.4.3) lib/devise/mapping.rb:83:in `to'
+devise (4.4.3) lib/devise/strategies/rememberable.rb:56:in `remember_key'
+devise (4.4.3) lib/devise/strategies/rememberable.rb:60:in `remember_cookie'
+devise (4.4.3) lib/devise/strategies/rememberable.rb:15:in `valid?'
+warden (1.2.7) lib/warden/proxy.rb:356:in `block in _run_strategies_for'
+warden (1.2.7) lib/warden/proxy.rb:354:in `each'
+warden (1.2.7) lib/warden/proxy.rb:354:in `_run_strategies_for'
+warden (1.2.7) lib/warden/proxy.rb:324:in `_perform_authentication'
+warden (1.2.7) lib/warden/proxy.rb:128:in `authenticate!'
+devise (4.4.3) lib/devise/controllers/helpers.rb:118:in `authenticate_user!'
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:22:09 -0300
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate_user!' for #<HomeController:0x000055ca64a35820>
+Did you mean?  authenticate_usuario!):
+  
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:22:12 -0300
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate_user!' for #<HomeController:0x00007fb8d5402ac8>
+Did you mean?  authenticate_usuario!):
+  
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:22:40 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2018-06-13 18:22:41 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 620ms (Views: 566.7ms | ActiveRecord: 20.3ms)
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2018-06-13 18:24:08 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JaVgG6tBfS0AlLrQ0emC4EoJSeyIlyPGP/u/nEuOGtl8etuTac8MO08CSjv+rruFKnTcLNW7uyku/XkgW7CRpA==", "usuario"=>{"email"=>"teste@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`email` = 'teste@gmail.com' ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 37ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JaVgG6tBfS0AlLrQ0emC4EoJSeyIlyPGP/u/nEuOGtl8etuTac8MO08CSjv+rruFKnTcLNW7uyku/XkgW7CRpA==", "usuario"=>{"email"=>"teste@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 508ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2018-06-13 18:24:13 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 95ms (Views: 92.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-06-13 18:24:20 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XK7F6jZrVvKGg/DOwJQ/y4T2EIeJmeXthwWkWnQxKBH4GyErKOU0vWH+HtsFi+jI7QgwESwECqO8TqpnUB/cOQ==", "usuario"=>{"email"=>"teste@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUsuario Exists (7.3ms)[0m  [1m[34mSELECT  1 AS one FROM `usuarios` WHERE `usuarios`.`email` = BINARY 'teste@gmail.com' LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUsuario Create (0.6ms)[0m  [1m[32mINSERT INTO `usuarios` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('teste@gmail.com', '$2a$11$D/5dcwF8o737sBs7Vf8GROMvV6qnmPpmo8r2i5Eh9BtTsgxWfVblW', '2018-06-13 21:24:21', '2018-06-13 21:24:21')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (66.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUsuario Update (24.1ms)[0m  [1m[33mUPDATE `usuarios` SET `sign_in_count` = 1, `current_sign_in_at` = '2018-06-13 21:24:21', `last_sign_in_at` = '2018-06-13 21:24:21', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `usuarios`.`id` = 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (62.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 529ms (ActiveRecord: 163.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:24:21 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (1.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 77ms (Views: 38.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/asdfasd" for 127.0.0.1 at 2018-06-13 18:24:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/asdfasd"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/asdfasd" for 127.0.0.1 at 2018-06-13 18:25:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/asdfasd"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:25:10 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 76ms (Views: 70.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/materiais" for 127.0.0.1 at 2018-06-13 18:25:13 -0300
+Processing by MateriaisController#index as HTML
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering materiais/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/materiais/index.html.erb:14
+  Rendered materiais/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 106ms (Views: 52.3ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/materiais/new" for 127.0.0.1 at 2018-06-13 18:25:20 -0300
+Processing by MateriaisController#new as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering materiais/new.html.erb within layouts/application
+  Rendered materiais/_form.html.erb (3.7ms)
+  Rendered materiais/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 59ms (Views: 46.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/materiais" for 127.0.0.1 at 2018-06-13 18:25:49 -0300
+Processing by MateriaisController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XT1ZiFr1foAaUrl2Ay7n9TgHz1Fszu+Pwvp1Kc+qbJLRMlbulz/L82vF8DQFO/eY0Nc76dl+UF0GD8SEavnHUw==", "material"=>{"nome"=>"Lápis"}, "commit"=>"Criar Material"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/materiais_controller.rb:30
+  [1m[36mMaterial Create (0.7ms)[0m  [1m[32mINSERT INTO `materiais` (`nome`, `created_at`, `updated_at`) VALUES ('Lápis', '2018-06-13 21:25:49', '2018-06-13 21:25:49')[0m
+  ↳ app/controllers/materiais_controller.rb:30
+  [1m[35m (94.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/materiais_controller.rb:30
+Redirected to http://localhost:3000/materiais/1
+Completed 302 Found in 111ms (ActiveRecord: 96.5ms)
+
+
+Started GET "/materiais/1" for 127.0.0.1 at 2018-06-13 18:25:49 -0300
+Processing by MateriaisController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mMaterial Load (0.9ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` WHERE `materiais`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/materiais_controller.rb:67
+  Rendering materiais/show.html.erb within layouts/application
+  Rendered materiais/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 56ms (Views: 48.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/materiais" for 127.0.0.1 at 2018-06-13 18:25:52 -0300
+Processing by MateriaisController#index as HTML
+  [1m[36mUsuario Load (4.4ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering materiais/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/materiais/index.html.erb:14
+  Rendered materiais/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 34.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/materiais" for 127.0.0.1 at 2018-06-13 18:26:34 -0300
+Processing by MateriaisController#index as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering materiais/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.8ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/materiais/index.html.erb:14
+  Rendered materiais/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 98ms (Views: 91.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:26:36 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (412.7ms)
+Completed 500 Internal Server Error in 425ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `quantidade_materiais_path' for #<#<Class:0x00007fb8e422abd8>:0x00007fb8d5600320>
+Did you mean?  material_quantidades_path):
+    1: <div>
+    2:     <h1>Bem vindo ao almoxarifado Almox</h1>
+    3:     <%= link_to "Materiais", materiais_path%>
+    4:     <%= link_to "Quantidades de Materiais", quantidade_materiais_path%>
+    5: </div>
+  
+app/views/home/index.html.erb:4:in `_app_views_home_index_html_erb___3578762282571908318_70215915275780'
+Started GET "/" for 127.0.0.1 at 2018-06-13 18:27:09 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 66ms (Views: 60.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:27:11 -0300
+Processing by MaterialQuantidadesController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/index.html.erb within layouts/application
+  [1m[36mMaterialQuantidade Load (0.6ms)[0m  [1m[34mSELECT `material_quantidades`.* FROM `material_quantidades`[0m
+  ↳ app/views/material_quantidades/index.html.erb:15
+  Rendered material_quantidades/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 134ms (Views: 52.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:27:14 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  Rendered material_quantidades/_form.html.erb (16.6ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 67ms (Views: 54.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:32:24 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (16.1ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (17.6ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 18.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for [["Lápis", 1]]:Array):
+    13: 
+    14:   <div class="field">
+    15:     <%= form.label :material_id %>
+    16:     <%= form.select("nome", "material_id", @materiais.collect {|p| [ p.nome, p.id ] }, {prompt: 'Selecione um material'}) %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+  
+app/views/material_quantidades/_form.html.erb:16:in `block in _app_views_material_quantidades__form_html_erb__2981188762231470287_70216139389080'
+app/views/material_quantidades/_form.html.erb:1:in `_app_views_material_quantidades__form_html_erb__2981188762231470287_70216139389080'
+app/views/material_quantidades/new.html.erb:3:in `_app_views_material_quantidades_new_html_erb___103751520316050212_70216139434420'
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:34:03 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  Rendered material_quantidades/_form.html.erb (1.8ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/neubaner/teste/Almoxarifado/app/views/material_quantidades/_form.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+...mpt: 'Selecione um material') );@output_buffer.safe_append='
+...                              ^
+/home/neubaner/teste/Almoxarifado/app/views/material_quantidades/_form.html.erb:29: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/material_quantidades/_form.html.erb:16: syntax error, unexpected ')', expecting keyword_end
+app/views/material_quantidades/_form.html.erb:29: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/material_quantidades/new.html.erb:3:in `_app_views_material_quantidades_new_html_erb___103751520316050212_70216038493920'
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:34:18 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (6.4ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (2.9ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (330.2ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (335.8ms)
+Completed 200 OK in 724ms (Views: 709.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:34:45 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (15.6ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 95ms (Views: 48.4ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:35:04 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H9X9nLOOHy3TYEPwuo1MVT1BGUEyHo8aBBt2MPltsx9GCkYUcQBuO5z2sxuVynUwXTyMgW8yF/UVHbCM6VM4Yg==", "material_quantidade"=>{"material"=>"Lápis", "quantidade"=>"3"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :material
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:31
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/material_quantidades_controller.rb:31
+  Rendering material_quantidades/new.html.erb within layouts/application
+  Rendered material_quantidades/_form.html.erb (4.0ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13: 
+    14:   <div class="field">
+    15:     <%= form.label :material_id %>
+    16:     <%= form.select :material, @materiais, prompt: 'Selecione um material' %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+  
+app/views/material_quantidades/_form.html.erb:16:in `block in _app_views_material_quantidades__form_html_erb__2981188762231470287_70215918598120'
+app/views/material_quantidades/_form.html.erb:1:in `_app_views_material_quantidades__form_html_erb__2981188762231470287_70215918598120'
+app/views/material_quantidades/new.html.erb:3:in `_app_views_material_quantidades_new_html_erb___103751520316050212_70215918629160'
+app/controllers/material_quantidades_controller.rb:35:in `block (2 levels) in create'
+app/controllers/material_quantidades_controller.rb:30:in `create'
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:36:47 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H9X9nLOOHy3TYEPwuo1MVT1BGUEyHo8aBBt2MPltsx9GCkYUcQBuO5z2sxuVynUwXTyMgW8yF/UVHbCM6VM4Yg==", "material_quantidade"=>{"material"=>"Lápis", "quantidade"=>"3"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (2.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :material
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (12.2ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 603ms (Views: 43.9ms | ActiveRecord: 19.9ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:36:56 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kiBA5mevbQUGKlvZRxtwFWffty4XU+hoomD5YxYZQDDL//tupSEcE0m8qzJoXElwB6Ii7kp/cIezZj/fBifLTQ==", "material_quantidade"=>{"material"=>"Lápis", "quantidade"=>"3"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :material
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (5.5ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 59ms (Views: 50.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:37:00 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AVBT5UObbMeGudBDBbBkLh/v/hDxHz9wb5IqtxqGn09Yj+htgRUd0ckvIKgq911Lf5Jr0Kwzp59+lOwLCrgUMg==", "material_quantidade"=>{"material"=>"", "quantidade"=>"3"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :material
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (9.5ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 78ms (Views: 66.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:37:22 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PzWQun+Skngz+IAXgsXaxJ3PrCsatP3efAt0M95rZs9m6isyvRzjbnxucPytguOh/bI560eYZTFtDbKPzlXtsg==", "material_quantidade"=>{"material"=>"", "quantidade"=>"3"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :material
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (5.6ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 64ms (Views: 55.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:37:23 -0300
+Processing by MaterialQuantidadesController#index as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/index.html.erb within layouts/application
+  [1m[36mMaterialQuantidade Load (0.5ms)[0m  [1m[34mSELECT `material_quantidades`.* FROM `material_quantidades`[0m
+  ↳ app/views/material_quantidades/index.html.erb:15
+  Rendered material_quantidades/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:37:25 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (5.7ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:37:31 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2ih7oE6VapbtZ538eVWsWdJ+Yn8IDzX3CPTgqtkWAKT7U6g50s6VG3+26Gkw3U1R6CGLaHjLbdLfOlIsqz9BJg==", "material_quantidade"=>{"material"=>"Lápis", "quantidade"=>"3"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :material
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (6.3ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 64ms (Views: 54.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:38:06 -0300
+Processing by MaterialQuantidadesController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/index.html.erb within layouts/application
+  [1m[36mMaterialQuantidade Load (1.0ms)[0m  [1m[34mSELECT `material_quantidades`.* FROM `material_quantidades`[0m
+  ↳ app/views/material_quantidades/index.html.erb:15
+  Rendered material_quantidades/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 74ms (Views: 67.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:38:09 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  Rendered material_quantidades/_form.html.erb (2.0ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/neubaner/teste/Almoxarifado/app/views/material_quantidades/_form.html.erb:16: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
+....all.collect {|m| m.id, m.nome}, prompt: 'Selecione um mater...
+...                              ^
+/home/neubaner/teste/Almoxarifado/app/views/material_quantidades/_form.html.erb:16: syntax error, unexpected ')', expecting '}'
+...ompt: 'Selecione um material' );@output_buffer.safe_append='
+...                              ^
+/home/neubaner/teste/Almoxarifado/app/views/material_quantidades/_form.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/home/neubaner/teste/Almoxarifado/app/views/material_quantidades/_form.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/neubaner/teste/Almoxarifado/app/views/material_quantidades/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/material_quantidades/_form.html.erb:16: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
+app/views/material_quantidades/_form.html.erb:16: syntax error, unexpected ')', expecting '}'
+app/views/material_quantidades/_form.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+app/views/material_quantidades/_form.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/material_quantidades/_form.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/material_quantidades/new.html.erb:3:in `_app_views_material_quantidades_new_html_erb___103751520316050212_70215913966640'
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:38:40 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (4.9ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:38:54 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (7.2ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 69ms (Views: 63.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:39:03 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ncQ3SHIJdKch5IqVtbvwzoqVSJhk4Lu1RcPPf05XPJnEG4zAsIcFsW5yen6a/Mmr6ujdWDnMI1pUxQnDXmm35A==", "material_quantidade"=>{"material"=>"1", "quantidade"=>"2"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :material
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (7.8ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 109ms (Views: 96.7ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:39:07 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i9LHSlDv+iaHvkveFEHgWiUSEyi5gKi72oV6Xi7B+hLSDXzCkmGLMMgouzU7Btk/RW+G6OSsMFTLg7ziPv9xbw==", "material_quantidade"=>{"material"=>"1", "quantidade"=>"2"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :material
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (10.3ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 88ms (Views: 73.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:39:22 -0300
+Processing by MaterialQuantidadesController#index as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/index.html.erb within layouts/application
+  [1m[36mMaterialQuantidade Load (0.9ms)[0m  [1m[34mSELECT `material_quantidades`.* FROM `material_quantidades`[0m
+  ↳ app/views/material_quantidades/index.html.erb:15
+  Rendered material_quantidades/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/material_quantidades/new" for 127.0.0.1 at 2018-06-13 18:39:24 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (5.3ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 60ms (Views: 54.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:39:29 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+saBgpTaKsgplU6BepZlLp2Tjh1GNm/jB9rQ/mILKnHbvVIbCIHVRbtEOxQzHoQmp8xnCjbyN8bQFGJ4ECJr8w==", "material_quantidade"=>{"material_id"=>"1", "quantidade"=>"2"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (3.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[36mMaterial Load (2.6ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` WHERE `materiais`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[36mMaterialQuantidade Create (16.9ms)[0m  [1m[32mINSERT INTO `material_quantidades` (`material_id`, `quantidade`, `created_at`, `updated_at`) VALUES (1, 2, '2018-06-13 21:39:29', '2018-06-13 21:39:29')[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (78.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+Redirected to http://localhost:3000/material_quantidades/1
+Completed 302 Found in 578ms (ActiveRecord: 103.0ms)
+
+
+Started GET "/material_quantidades/1" for 127.0.0.1 at 2018-06-13 18:39:29 -0300
+Processing by MaterialQuantidadesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mMaterialQuantidade Load (0.4ms)[0m  [1m[34mSELECT  `material_quantidades`.* FROM `material_quantidades` WHERE `material_quantidades`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/material_quantidades_controller.rb:67
+  Rendering material_quantidades/show.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` WHERE `materiais`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/material_quantidades/show.html.erb:5
+  Rendered material_quantidades/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 34.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/material_quantidades" for 127.0.0.1 at 2018-06-13 18:39:40 -0300
+Processing by MaterialQuantidadesController#index as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/index.html.erb within layouts/application
+  [1m[36mMaterialQuantidade Load (0.6ms)[0m  [1m[34mSELECT `material_quantidades`.* FROM `material_quantidades`[0m
+  ↳ app/views/material_quantidades/index.html.erb:15
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` WHERE `materiais`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/material_quantidades/index.html.erb:17
+  Rendered material_quantidades/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 1.8ms)
+
+
+  [1m[35m (184.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateRegistros (20180613212109)
+  [1m[35m (278.7ms)[0m  [1m[35mDROP TABLE `registros`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (61.9ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180613212109'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-06-14 20:14:47 -0300
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.0) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.0) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateRegistros (20180614231350)
+  [1m[35m (323.8ms)[0m  [1m[35mCREATE TABLE `registros` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `usuarios_id` bigint, `materiais_id` bigint, `quantidade` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_registros_on_usuarios_id`  (`usuarios_id`),  INDEX `index_registros_on_materiais_id`  (`materiais_id`), CONSTRAINT `fk_rails_add60ddb90`
+FOREIGN KEY (`usuarios_id`)
+  REFERENCES `usuarios` (`id`)
+, CONSTRAINT `fk_rails_3e5b617105`
+FOREIGN KEY (`materiais_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180614231350_create_registros.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180614231350')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (73.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-06-14 20:15:02 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 352ms (Views: 309.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-14 20:15:55 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 39.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/material_quantidades" for 127.0.0.1 at 2018-06-14 20:16:30 -0300
+Processing by MaterialQuantidadesController#index as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/index.html.erb within layouts/application
+  [1m[36mMaterialQuantidade Load (1.1ms)[0m  [1m[34mSELECT `material_quantidades`.* FROM `material_quantidades`[0m
+  ↳ app/views/material_quantidades/index.html.erb:15
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` WHERE `materiais`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/material_quantidades/index.html.erb:17
+  Rendered material_quantidades/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 113ms (Views: 79.7ms | ActiveRecord: 8.0ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateRegistros (20180614231350)
+  [1m[35m (203.1ms)[0m  [1m[35mDROP TABLE `registros`[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (41.8ms)[0m  [1m[31mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20180614231350'[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('5331655568933324610', 0)[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateRegistros (20180614231920)
+  [1m[35m (379.8ms)[0m  [1m[35mCREATE TABLE `registros` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `usuarios_id` bigint, `materiais_id` bigint, `quantidade` int,  INDEX `index_registros_on_usuarios_id`  (`usuarios_id`),  INDEX `index_registros_on_materiais_id`  (`materiais_id`), CONSTRAINT `fk_rails_add60ddb90`
+FOREIGN KEY (`usuarios_id`)
+  REFERENCES `usuarios` (`id`)
+, CONSTRAINT `fk_rails_3e5b617105`
+FOREIGN KEY (`materiais_id`)
+  REFERENCES `materiais` (`id`)
+)[0m
+  ↳ db/migrate/20180614231920_create_registros.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180614231920')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (86.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5331655568933324610')[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-06-14 20:22:17 -0300
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 132ms (Views: 82.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/materiais" for 127.0.0.1 at 2018-06-14 20:22:21 -0300
+Processing by MateriaisController#index as HTML
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering materiais/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.9ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/materiais/index.html.erb:14
+  Rendered materiais/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 101ms (Views: 70.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/materiais" for 127.0.0.1 at 2018-06-14 20:22:29 -0300
+Processing by MateriaisController#index as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering materiais/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/materiais/index.html.erb:14
+  Rendered materiais/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 79ms (Views: 43.1ms | ActiveRecord: 4.7ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` ORDER BY `materiais`.`id` DESC LIMIT 1[0m
+  [1m[36mMaterial Load (1.0ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` ORDER BY `materiais`.`id` DESC LIMIT 1[0m
+  [1m[36mMaterial Load (0.9ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` ORDER BY `materiais`.`id` DESC LIMIT 1[0m
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` ORDER BY `materiais`.`id` DESC LIMIT 1[0m
+  [1m[36mMaterialQuantidade Load (0.5ms)[0m  [1m[34mSELECT  `material_quantidades`.* FROM `material_quantidades` ORDER BY `material_quantidades`.`id` DESC LIMIT 1[0m
+  [1m[36mMaterialQuantidade Load (0.9ms)[0m  [1m[34mSELECT  `material_quantidades`.* FROM `material_quantidades` ORDER BY `material_quantidades`.`id` DESC LIMIT 1[0m
+  [1m[36mMaterial Load (1.0ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` WHERE `materiais`.`id` = 1 LIMIT 1[0m
+Started GET "/materiais" for 127.0.0.1 at 2018-06-14 22:18:00 -0300
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by MateriaisController#index as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering materiais/index.html.erb within layouts/application
+  [1m[36mMaterial Load (0.9ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/materiais/index.html.erb:14
+  Rendered materiais/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 126ms (Views: 76.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-14 22:20:51 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-14 22:22:18 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 59ms (Views: 53.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/material_quantidades" for 127.0.0.1 at 2018-06-14 22:22:34 -0300
+Processing by MaterialQuantidadesController#index as HTML
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/index.html.erb within layouts/application
+  [1m[36mMaterialQuantidade Load (0.7ms)[0m  [1m[34mSELECT `material_quantidades`.* FROM `material_quantidades`[0m
+  ↳ app/views/material_quantidades/index.html.erb:15
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` WHERE `materiais`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/material_quantidades/index.html.erb:17
+  Rendered material_quantidades/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 59ms (Views: 50.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/asdfasdfd" for 127.0.0.1 at 2018-06-14 22:25:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/asdfasdfd"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/asdfasdfd" for 127.0.0.1 at 2018-06-14 22:50:19 -0300
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/asdfasdfd"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-14 22:50:23 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (237.3ms)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_material_quantidade_path' for #<#<Class:0x00007fb8d438d990>:0x00007fb8f0603050>
+Did you mean?  new_material_path):
+    2:     <h1>Bem vindo ao almoxarifado Almox</h1>
+    3:     <p><%= link_to "Materiais", materiais_path%></p>
+    4:     <p><%= link_to "Consultar quantidades de Materiais", material_quantidades_path%></p>
+    5:     <p><%= link_to "Registrar entrada de Materiais", new_material_quantidade_path(:entrada)%></p>
+    6:     <p><%= link_to "Registrar retirada de Materiais", new_material_quantidade_path(:retirada)%></p>
+    7: </div>
+  
+app/views/home/index.html.erb:5:in `_app_views_home_index_html_erb___3578762282571908318_70215905605260'
+Started GET "/asdf" for 127.0.0.1 at 2018-06-14 22:50:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/asdf"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/asdf" for 127.0.0.1 at 2018-06-14 22:52:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/asdf"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-14 22:53:01 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (242.1ms)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_material_quantidade_path' for #<#<Class:0x00007fb8dc6d2ad0>:0x00007fb8dc6451f8>
+Did you mean?  new_material_path):
+    2:     <h1>Bem vindo ao almoxarifado Almox</h1>
+    3:     <p><%= link_to "Materiais", materiais_path%></p>
+    4:     <p><%= link_to "Consultar quantidades de Materiais", material_quantidades_path%></p>
+    5:     <p><%= link_to "Registrar entrada de Materiais", new_material_quantidade_path(:entrada)%></p>
+    6:     <p><%= link_to "Registrar retirada de Materiais", new_material_quantidade_path(:retirada)%></p>
+    7: </div>
+  
+app/views/home/index.html.erb:5:in `_app_views_home_index_html_erb___3578762282571908318_70215973948220'
+Started GET "/asdf" for 127.0.0.1 at 2018-06-14 22:53:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/asdf"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-06-14 23:00:22 -0300
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (257.7ms)
+Completed 500 Internal Server Error in 363ms (ActiveRecord: 62.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_material_quantidade_path' for #<#<Class:0x00007fb8e4d22e28>:0x00007fb8e4d21460>
+Did you mean?  new_material_path):
+    2:     <h1>Bem vindo ao almoxarifado Almox</h1>
+    3:     <p><%= link_to "Materiais", materiais_path%></p>
+    4:     <p><%= link_to "Consultar quantidades de Materiais", material_quantidades_path%></p>
+    5:     <p><%= link_to "Registrar entrada de Materiais", new_material_quantidade_path(:entrada)%></p>
+    6:     <p><%= link_to "Registrar retirada de Materiais", new_material_quantidade_path(:retirada)%></p>
+    7: </div>
+  
+app/views/home/index.html.erb:5:in `_app_views_home_index_html_erb___3578762282571908318_70216044845840'
+Started GET "/" for 127.0.0.1 at 2018-06-14 23:02:00 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 79ms (Views: 47.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/material_quantidades/new/entrada" for 127.0.0.1 at 2018-06-14 23:02:03 -0300
+Processing by MaterialQuantidadesController#new as HTML
+  Parameters: {"acao"=>"entrada"}
+  [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering material_quantidades/new.html.erb within layouts/application
+  [1m[36mMaterial Load (1.0ms)[0m  [1m[34mSELECT `materiais`.* FROM `materiais`[0m
+  ↳ app/views/material_quantidades/_form.html.erb:16
+  Rendered material_quantidades/_form.html.erb (22.4ms)
+  Rendered material_quantidades/new.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 123ms (Views: 89.8ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-14 23:02:19 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/material_quantidades"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/material_quantidades" for 127.0.0.1 at 2018-06-14 23:02:35 -0300
+Processing by MaterialQuantidadesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lUdb47/YZBoA54iAlGosCuMjyVpd0bePPgqqGIzSXeS0PIh6I4Obl5I2/RXd4s0C2XwgTS0V76rpxBie/vscZg==", "material_quantidade"=>{"material_id"=>"1", "quantidade"=>"3"}, "commit"=>"Criar Material quantidade"}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  ↳ /home/neubaner/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT  `materiais`.* FROM `materiais` WHERE `materiais`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[36mMaterialQuantidade Create (315.0ms)[0m  [1m[32mINSERT INTO `material_quantidades` (`material_id`, `quantidade`, `created_at`, `updated_at`) VALUES (1, 3, '2018-06-15 02:02:35', '2018-06-15 02:02:35')[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+  [1m[35m (208.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/material_quantidades_controller.rb:30
+Redirected to 
+Completed 500 Internal Server Error in 929ms (ActiveRecord: 530.9ms)
+
+
+  
+NoMethodError (undefined method `material_quantidade_url' for #<MaterialQuantidadesController:0x00007fb8f0a7cde8>
+Did you mean?  material_quantidades_url
+               material_quantidade_params
+               material_quantidades_path):
+  
+app/controllers/material_quantidades_controller.rb:31:in `block (2 levels) in create'
+app/controllers/material_quantidades_controller.rb:29:in `create'

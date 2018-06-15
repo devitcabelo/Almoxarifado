@@ -14,9 +14,9 @@
     <% @materiais.each do |material| %>
       <tr>
         <td><%= material.nome %></td>
-        <td><%= link_to 'Show', material %></td>
-        <td><%= link_to 'Edit', edit_material_path(material) %></td>
-        <td><%= link_to 'Destroy', material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', material %></td>
+        <td><%= link_to 'Editar', edit_material_path(material) %></td>
+        <td><%= link_to 'Excluir', material, method: :delete, data: { confirm: 'Tem certeza que deseja excluir este material?' } unless material.registros.any? %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,5 @@
 
 <br>
 
-<%= link_to 'New Material', new_material_path %>
+<%= link_to 'Novo Material', new_material_path %> - 
+<%= link_to 'Voltar', root_path%>

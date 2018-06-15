@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Material Quantidades</h1>
+<h1>Quantidades de materiais</h1>
 
 <table>
   <thead>
@@ -16,9 +16,6 @@
       <tr>
         <td><%= material_quantidade.material %></td>
         <td><%= material_quantidade.quantidade %></td>
-        <td><%= link_to 'Show', material_quantidade %></td>
-        <td><%= link_to 'Edit', edit_material_quantidade_path(material_quantidade) %></td>
-        <td><%= link_to 'Destroy', material_quantidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +23,4 @@
 
 <br>
 
-<%= link_to 'New Material Quantidade', new_material_quantidade_path %>
+<%= link_to 'Voltar', root_path%>

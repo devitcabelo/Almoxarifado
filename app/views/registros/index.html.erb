@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Log</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuário</th>
+      <th>Material</th>
+      <th>Ação</th>
+      <th>Quantidade</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registros.each do |registro| %>
+      <tr>
+        <td><%= registro.usuario %></td>
+        <td><%= registro.material %></td>
+        <td><%= registro.acao.capitalize %></td>
+        <td><%= registro.quantidade %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Voltar', root_path%>

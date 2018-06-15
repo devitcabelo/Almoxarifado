@@ -1,7 +1,16 @@
 class Material < ApplicationRecord
-    belongs_to :material_quantidades
+  #RELATIONS
+  has_one :material_quantidade
+  has_many :registros
 
-    def to_s
-        self.nome
-    end
+  #VALIDATIONS
+  validates :nome, uniqueness: true
+
+  #DELEGATES
+  delegate :quantidade, to: :material_quantidade
+
+  
+  def to_s
+    self.nome
+  end
 end

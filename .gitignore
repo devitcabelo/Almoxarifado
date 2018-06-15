@@ -1,4 +1,12 @@
+#ignore temp folder from project
 /tmp
+#ignore log folder from project
 /log
+
+#ignore log from bundle of project
 .bundle
+
+#ignore byebug history from byebug of project
 .byebug_history
+
+/db/schema.rb

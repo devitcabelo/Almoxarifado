@@ -25,8 +25,9 @@ class MateriaisController < ApplicationController
   # POST /materiais.json
   def create
     @material = Material.new(material_params)
-
+    
     respond_to do |format|
+      material_quantidade = MaterialQuantidade.create(material: @material, quantidade: 0)
       if @material.save
         format.html { redirect_to @material, notice: 'Material was successfully created.' }
         format.json { render :show, status: :created, location: @material }
@@ -54,6 +55,7 @@ class MateriaisController < ApplicationController
   # DELETE /materiais/1
   # DELETE /materiais/1.json
   def destroy
+    @material.material_quantidade.destroy
     @material.destroy
     respond_to do |format|
       format.html { redirect_to materiais_url, notice: 'Material was successfully destroyed.' }
